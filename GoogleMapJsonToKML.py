@@ -5,9 +5,9 @@ import simplekml
 # File Paths
 # Process :　json -> geojson -> kml
 # --------------------------
-source_json = r"C:\Users\ABC\Downloads\timeline.json"
-output_geojson = r"C:\Users\ABC\Downloads\output.geojson" 
-output_kml = r"C:\Users\ABC\Downloads\output.kml"
+source_json = r"C:\Users\Ian\Downloads\timeline.json"
+output_kml = r"C:\Users\Ian\Downloads\output.kml"
+# output_geojson (Optional)= r"C:\Users\Ian\Downloads\output.geojson"  
 
 
 # --------------------------
@@ -70,16 +70,16 @@ for segment in data.get("semanticSegments", []):
                 "properties": {"type": "path"}
             })
 
-# Save the GeoJSON file
-output_geojson = r"C:\Users\Ian\Downloads\output.geojson"
-with open(output_geojson, "w", encoding="utf-8") as geojson_file:
-    json.dump(geojson, geojson_file, indent=4)
+# Save the GeoJSON file (Optional)
+# output_geojson = r"C:\Users\Ian\Downloads\output.geojson"
+# with open(output_geojson, "w", encoding="utf-8") as geojson_file:
+#     json.dump(geojson, geojson_file, indent=4)
 
-print(f"GeoJSON file saved to: {output_geojson}")
+# print(f"GeoJSON file saved to: {output_geojson}")
 
 
 # --------------------------
-# GeoJSON → KML (2k7)
+# GeoJSON → KML 
 # --------------------------
 kml = simplekml.Kml()
 
