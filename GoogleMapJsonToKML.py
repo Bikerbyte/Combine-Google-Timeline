@@ -7,7 +7,7 @@ import simplekml
 # --------------------------
 source_json = r"C:\Users\Ian\Downloads\timeline.json"
 output_kml = r"C:\Users\Ian\Downloads\output.kml"
-# output_geojson (Optional)= r"C:\Users\Ian\Downloads\output.geojson"  
+# output_geojson (Optional)= r"C:\Users\ABC\Downloads\output.geojson"  
 
 
 # --------------------------
@@ -110,7 +110,6 @@ for feature in geojson["features"]:
         )
 
 # Save KML
-output_kml = r"C:\Users\Ian\Downloads\output.kml"
 kml.save(output_kml)
 
 print(f"KML file saved to: {output_kml}")
